@@ -1,0 +1,88 @@
+# ==========================================================
+# PAR�METROS ESPEC�FICOS PARA HATEB (Navegaci�n Social)
+# ==========================================================
+
+planning_mode: 1
+disable_warm_start: True
+shrink_horizon_backup: True
+holonomic_robot: False
+type: 0 #(0: Robot, 1: Human)
+
+# Agents (Humanos)
+agent_radius: 0.31
+robot_radius: 0.47
+min_agent_dist: 0.4
+max_agent_vel_x: 1.3
+max_agent_vel_y: 0.4
+nominal_agent_vel_x: 1.1
+max_agent_vel_x_backwards: 0.01
+max_agent_vel_theta: 1.1
+agent_acc_lim_x: 0.6
+agent_acc_lim_y: 0.3
+agent_acc_lim_theta: 0.8
+
+# Predicci�n de CoHan y Reglas de Interacci�n
+use_external_prediction: True
+predict_agent_behind_robot: True
+predict_agent_goal: False
+agent_robot_ttc_scale_alpha: 1.0
+agent_robot_ttcplus_scale_alpha: 1.0
+agent_min_samples: 3
+use_agent_robot_safety_c: True
+use_agent_robot_rel_vel_c: True
+use_agent_robot_visi_c: True
+use_agent_agent_safety_c: True
+use_agent_robot_ttc_c: False
+use_agent_robot_ttclosest_c: False
+use_agent_robot_ttcplus_c: False
+scale_agent_robot_ttc_c: False
+scale_agent_robot_ttcplus_c: False
+add_invisible_humans: True
+ttc_threshold: 5.0
+ttclosest_threshold: 1.0
+ttcplus_threshold: 5.0
+ttcplus_timer: 1.0
+rel_vel_cost_threshold: 1.5
+visibility_cost_threshold: 2.5
+invisible_human_threshold: 0.8
+min_agent_robot_dist: 0.6
+
+# Pesos de Optimizaci�n (Espec�ficos de Agentes)
+weight_max_agent_vel_x: 4
+weight_max_agent_vel_y: 4
+weight_nominal_agent_vel_x: 2
+weight_max_agent_vel_theta: 2
+weight_agent_acc_lim_x: 2
+weight_agent_acc_lim_y: 2
+weight_agent_acc_lim_theta: 2
+weight_agent_optimaltime: 3.0
+weight_agent_viapoint: 0.5
+weight_agent_robot_safety: 2.0
+weight_agent_agent_safety: 2.0
+weight_agent_robot_ttc: 1.0
+weight_agent_robot_rel_vel: 5.0
+weight_agent_robot_ttcplus: 1.0
+weight_agent_robot_visibility: 5.0
+weight_invisible_human: 2.0
+cap_optimaltime_penalty: True
+
+# Visualization
+pose_array_z_scale: 0.5
+publish_agents_global_plans: true
+publish_agents_local_plan_fp_poses: true
+publish_agents_local_plan_poses: true
+publish_agents_local_plans: true
+publish_robot_global_plan: true
+publish_robot_local_plan: true
+publish_robot_local_plan_fp_poses: true
+publish_robot_local_plan_poses: true
+
+# Approach Mode
+approach_id: 1
+approach_dist: 1.0
+approach_angle: 3.14
+
+# Homotopy (HATeb config)
+enable_homotopy_class_planning: False
+enable_multithreading: True
+simple_exploration: True

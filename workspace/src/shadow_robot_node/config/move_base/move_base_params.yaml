@@ -1,0 +1,26 @@
+# ==========================================
+# PARÁMETROS NÚCLEO DE MOVE_BASE
+# ==========================================
+
+# Frecuencias (El salvavidas de la CPU)
+controller_frequency: 10.0  # TEB/HATeb calcula esquives a 10 Hz (Rápido)
+planner_frequency: 2.0      # El Global Planner busca la ruta a 2 Hz (Tranquilo)
+
+# Control de Paciencia y Bucles Infinitos
+max_planning_retries: 2     # Si no encuentra ruta en 2 intentos, aborta rápido
+planner_patience: 5.0       # Tiempo máximo esperando al Global Planner antes de fallar
+controller_patience: 15.0   # Tiempo máximo esperando a que el robot se mueva
+
+# Comportamientos ante bloqueos (Apagados para diagnóstico)
+recovery_behavior_enabled: false 
+clearing_rotation_allowed: false 
+
+# Optimizaciones de Cálculo (La cura a la "Explosión de Dijkstra")
+make_plan_add_unreachable_goal: false # Falla rápido si la meta está dentro de un obstáculo
+make_plan_clear_costmap: true         # Limpia el mapa antes de recalcular
+
+# Oscilaciones
+oscillation_timeout: 0.0
+oscillation_distance: 0.5
+shutdown_costmaps: false
+conservative_reset_dist: 3.0

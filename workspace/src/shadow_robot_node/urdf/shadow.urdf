@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shadow">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000745474052696616 0.0002774983219874 0.0832601381084502"
+        rpy="0 0 0" />
+      <mass
+        value="3.44468681093337" />
+      <inertia
+        ixx="0.078805827276942"
+        ixy="0.000214086766267844"
+        ixz="0.000187837957540265"
+        iyy="0.111980891040282"
+        iyz="4.76450897430536E-05"
+        izz="0.161356059476463" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="tray">
+    <inertial>
+      <origin
+        xyz="-0.023164 -9.6111E-05 0.45173"
+        rpy="0 0 0" />
+      <mass
+        value="13.876" />
+      <inertia
+        ixx="0.48663"
+        ixy="0.00012307"
+        ixz="-0.013906"
+        iyy="0.51896"
+        iyz="0.00011489"
+        izz="0.34267" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/tray.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/tray.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_tray"
+    type="fixed">
+    <origin
+      xyz="0 0 0.21"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="tray" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bpearl">
+    <inertial>
+      <origin
+        xyz="-0.00091895 3.1634E-05 -0.032289"
+        rpy="0 0 0" />
+      <mass
+        value="1.4687" />
+      <inertia
+        ixx="0.0014549"
+        ixy="-5.8438E-06"
+        ixz="-9.9232E-07"
+        iyy="0.0014301"
+        iyz="5.8223E-07"
+        izz="0.0024927" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/bpearl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/bpearl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tray_to_bpearl"
+    type="fixed">
+    <origin
+      xyz="0.139999999779585 0 0.46759356994"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="tray" />
+    <child
+      link="bpearl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="neck">
+    <inertial>
+      <origin
+        xyz="-0.0056334 0.00028579 0.10602"
+        rpy="0 0 0" />
+      <mass
+        value="1.0506" />
+      <inertia
+        ixx="0.0094319"
+        ixy="6.9962E-06"
+        ixz="-0.00016541"
+        iyy="0.0092839"
+        iyz="-3.9699E-05"
+        izz="0.0022392" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/neck.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/neck.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tray_to_neck"
+    type="fixed">
+    <origin
+      xyz="-0.16118 0 0.56363"
+      rpy="0 0 0.055" />
+    <parent
+      link="tray" />
+    <child
+      link="neck" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="zed_camera_link">
+    <inertial>
+      <origin
+        xyz="-0.00086754 -0.059999 -0.00018455"
+        rpy="0 0 0" />
+      <mass
+        value="0.16711" />
+      <inertia
+        ixx="0.0003828"
+        ixy="3.2819E-09"
+        ixz="-6.4524E-08"
+        iyy="3.2467E-05"
+        iyz="1.3858E-09"
+        izz="0.00039051" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/zed_camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/zed_camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zed_camera_link"
+    type="fixed">
+    <origin
+      xyz="0.08461 0.06 0.16897"
+      rpy="0 0 0" />
+    <parent
+      link="neck" />
+    <child
+      link="zed_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="helios">
+    <inertial>
+      <origin
+        xyz="0.00098097 0.00085821 -0.014039"
+        rpy="0 0 0" />
+      <mass
+        value="0.81549" />
+      <inertia
+        ixx="0.00093241"
+        ixy="4.9199E-06"
+        ixz="-2.2574E-06"
+        iyy="0.00093157"
+        iyz="-1.4544E-06"
+        izz="0.001563" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/helios.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/helios.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck_to_helios"
+    type="fixed">
+    <origin
+      xyz="-0.0068186 0 0.30359"
+      rpy="0 0 0" />
+    <parent
+      link="neck" />
+    <child
+      link="helios" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="cap">
+    <inertial>
+      <origin
+        xyz="1.2124E-06 -1.2649E-06 0.019457"
+        rpy="0 0 0" />
+      <mass
+        value="0.076724" />
+      <inertia
+        ixx="9.7004E-05"
+        ixy="-2.7874E-08"
+        ixz="1.7834E-09"
+        iyy="9.1333E-05"
+        iyz="-2.2465E-09"
+        izz="0.00012452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/cap.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/cap.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="helios_to_cup"
+    type="fixed">
+    <origin
+      xyz="0.0004128 -0.0012644 0.048746"
+      rpy="0 0 0" />
+    <parent
+      link="helios" />
+    <child
+      link="cap" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ricoh_theta_z1">
+    <inertial>
+      <origin
+        xyz="1.5445E-08 -0.0012514 -0.041268"
+        rpy="0 0 0" />
+      <mass
+        value="0.13859" />
+      <inertia
+        ixx="0.00019024"
+        ixy="1.7749E-09"
+        ixz="-8.7242E-10"
+        iyy="0.00017166"
+        iyz="1.2162E-08"
+        izz="3.0109E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/ricoh_theta_z1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.15294 0 0.031373 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/ricoh_theta_z1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cap_to_ricoh_theta_z1"
+    type="fixed">
+    <origin
+      xyz="0 0.0012644 0.15634"
+      rpy="0 0 0" />
+    <parent
+      link="cap" />
+    <child
+      link="ricoh_theta_z1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_left">
+    <inertial>
+      <origin
+        xyz="7.1552E-06 -0.0093383 0.006605"
+        rpy="0 0 0" />
+      <mass
+        value="16.872" />
+      <inertia
+        ixx="0.040965"
+        ixy="-1.0969E-08"
+        ixz="-1.0808E-07"
+        iyy="0.081815"
+        iyz="0.00052235"
+        izz="0.05211" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/motor_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/motor_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_motor_left"
+    type="fixed">
+    <origin
+      xyz="0 0.26107 0.03529"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_right">
+    <inertial>
+      <origin
+        xyz="0.00074547 0.0002775 0.08326"
+        rpy="0 0 0" />
+      <mass
+        value="3.4447" />
+      <inertia
+        ixx="0.078806"
+        ixy="0.00021409"
+        ixz="0.00018784"
+        iyy="0.11198"
+        iyz="4.7645E-05"
+        izz="0.16136" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/motor_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shadow/meshes/motor_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_motor_right"
+    type="fixed">
+    <origin
+      xyz="0 -0.26107 0.03529"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

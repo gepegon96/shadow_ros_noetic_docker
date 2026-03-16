@@ -1,0 +1,7 @@
+image: /root/catkin_ws/src/shadow_robot_node/maps/informatica.pgm
+resolution: 0.050000
+origin: [-31.531961, -7.743643, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

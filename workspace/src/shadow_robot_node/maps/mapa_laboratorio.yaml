@@ -1,0 +1,7 @@
+image: /root/catkin_ws/src/shadow_robot_node/maps/mapa_laboratorio.pgm
+resolution: 0.050000
+origin: [-4.288851, -7.562645, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

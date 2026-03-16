@@ -1,0 +1,13 @@
+# ==========================================================
+# PAR�METROS ESPEC�FICOS PARA EL BASELINE (TEB CL�SICO)
+# ==========================================================
+
+# El baseline debe confiar en weight_dynamic_obstacle (definido en common) 
+# para esquivar a los humanos publicados por CoHan como obst�culos din�micos.
+
+# Homotopy Class Planner (De tu archivo original de TEB)
+enable_homotopy_class_planning: false
+enable_multithreading: true
+max_number_classes: 4
+roadmap_graph_no_samples: 15
+roadmap_graph_area_width: 5
